@@ -1,10 +1,16 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Philip
+	name = Philip Kung
 	email = pkung67@utexas.edu
-# Please adapt and uncomment the following lines:
-#	name = Philip Kung
-#	email = pkung67@utexas.edu
+# Work repos under ~/workspace commit as Sweetspot
+[includeIf "gitdir:~/workspace/"]
+	path = ~/.config/git/sweetspot
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[fetch]
+	prune = true
 [push]
 	autoSetupRemote = true
 [url "git@github.com:"]

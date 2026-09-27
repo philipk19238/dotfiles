@@ -37,6 +37,7 @@ link zsh/.zprofile "$HOME/.zprofile"
 link config/starship.toml "$HOME/.config/starship.toml"
 link config/git/attributes "$HOME/.config/git/attributes"
 link config/git/gitconfig "$HOME/.gitconfig"
+link config/git/sweetspot "$HOME/.config/git/sweetspot"
 
 [[ -f "$HOME/.zshrc.local" ]] || cp "$DOTFILES/zsh/.zshrc.local.example" "$HOME/.zshrc.local"
 echo "Done. Put secrets in ~/.zshrc.local, then restart your shell."
