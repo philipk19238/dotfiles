@@ -13,4 +13,4 @@ if [[ -z "${GITHUB_PAT_TOKEN:-}" ]]; then
     export GITHUB_PAT_TOKEN="$GITHUB_TOKEN"
   fi
 fi
-. "$HOME/.cargo/env"
+[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
