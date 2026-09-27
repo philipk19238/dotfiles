@@ -1,0 +1,67 @@
+# Ghostty config — see `ghostty +show-config --default --docs` for all options
+
+# --- Theme ---
+theme = Vesper
+window-theme = dark
+
+# --- Font ---
+# GeistMono Nerd Font if installed (brew install --cask font-geist-mono-nerd-font);
+# otherwise Ghostty falls back to its bundled JetBrains Mono.
+font-family = GeistMono Nerd Font
+font-size = 14
+font-thicken = true
+font-feature = calt
+font-feature = liga
+
+# --- Window ---
+window-save-state = always
+window-padding-x = 10
+window-padding-y = 8
+window-padding-balance = true
+macos-titlebar-style = transparent
+background-opacity = 1
+
+# --- Cursor ---
+cursor-style = block
+cursor-style-blink = false
+cursor-opacity = 0.75
+
+# --- Shell ---
+shell-integration = zsh
+shell-integration-features = no-cursor, title
+bell-features = system
+
+# --- Behavior ---
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+clipboard-trim-trailing-spaces = true
+scrollback-limit = 10000000
+macos-option-as-alt = true
+macos-auto-secure-input = true
+macos-secure-input-indication = true
+confirm-close-surface = false
+quit-after-last-window-closed = false
+
+# --- Keybinds ---
+# Splits (pane management)
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+opt+left=goto_split:left
+keybind = cmd+opt+right=goto_split:right
+keybind = cmd+opt+up=goto_split:up
+keybind = cmd+opt+down=goto_split:down
+keybind = cmd+shift+enter=toggle_split_zoom
+
+# Quick terminal — slides in from the right, from any app.
+# (macOS will ask for accessibility permission the first time.)
+quick-terminal-position = right
+quick-terminal-animation-duration = 0
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+keybind = global:super+shift+`=toggle_quick_terminal
+
+# Jump between shell prompts in scrollback (uses shell integration)
+keybind = cmd+up=jump_to_prompt:-1
+keybind = cmd+down=jump_to_prompt:1
+
+# Shift+Enter sends a newline without submitting (Claude Code, etc.)
+keybind = shift+enter=text:\x1b\r
