@@ -1,0 +1,10 @@
+# Copy to ~/.zshrc.local and fill in. This file is sourced at the end of ~/.zshrc and is never committed.
+export ANTHROPIC_API_KEY=
+export GOOGLE_API_KEY=
+export BROWSERBASE_API_KEY=
+export BROWSERBASE_PROJECT_ID=
+export KERNEL_API_KEY=
+export PANGRAM_API_KEY=
+export TIPTAP_PRO_TOKEN=
+export INFISICAL_TOKEN=
+export INFISICAL_PROJECT_ID=

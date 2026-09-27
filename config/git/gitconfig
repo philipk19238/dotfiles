@@ -1,0 +1,27 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Philip
+	email = pkung67@utexas.edu
+# Please adapt and uncomment the following lines:
+#	name = Philip Kung
+#	email = pkung67@utexas.edu
+[push]
+	autoSetupRemote = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+[core]
+	attributesfile = ~/.config/git/attributes
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
